@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
+import Template from "@/components/common/Template.component";
+import MainBanner from "@/components/home/MainBanner.component";
 
 function HomePage() {
   return (
-    <div>
-      <Header />
-      HomePage
-    </div>
+    <Template>
+      <MainBanner />
+    </Template>
   );
 }
 
