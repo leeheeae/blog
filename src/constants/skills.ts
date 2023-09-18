@@ -70,7 +70,7 @@ export const skills: TypeSkills = [
   },
   {
     key: "App",
-    value: [
+    list: [
       {
         id: 0,
         name: "React Native",
