@@ -36,7 +36,7 @@ function Header() {
     <HeaderContainer>
       <InnerContents>
         {/* LOGO */}
-        <Logo to={"/"}>HEEAE</Logo>
+        <Logo to={"/"}>Heeae 😝</Logo>
 
         {/* Global Navigation Bar */}
         <Gnb>

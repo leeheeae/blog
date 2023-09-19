@@ -2,16 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Styled
+// # Styled
 import "./index.css";
 import { ThemeProvider } from "styled-components";
 import { darkTheme } from "./constants/theme";
 
-// Pages
+// # Pages
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
+import ListPage from "./pages/blog/ListPage";
+import DetailPage from "./pages/blog/DetailPage";
+import BlogTemplate from "./pages/blog/BlogTemplate";
 
-const router = createBrowserRouter(
+// # Routes
+const routes = createBrowserRouter(
   [
     {
       path: "/",
@@ -20,6 +24,14 @@ const router = createBrowserRouter(
     {
       path: "/work",
       element: <WorkPage />,
+    },
+    {
+      path: "/blog",
+      element: <BlogTemplate />,
+      children: [
+        { path: "list", element: <ListPage /> },
+        { path: "detail", element: <DetailPage /> },
+      ],
     },
   ],
   {
@@ -30,7 +42,7 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
-      <RouterProvider router={router} />
+      <RouterProvider router={routes} />
     </ThemeProvider>
   </React.StrictMode>
 );
