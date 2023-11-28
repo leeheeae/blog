@@ -6,88 +6,88 @@ export const skills: TypeSkills = [
     list: [
       {
         id: 0,
-        name: "Adobe PhotoShop",
+        name: "Adobe PhotoShop"
       },
       {
         id: 1,
-        name: "Adobe Illustrator",
+        name: "Adobe Illustrator"
       },
       {
         id: 2,
-        name: "Adobe XD",
+        name: "Adobe XD"
       },
       {
         id: 3,
-        name: "Figma",
-      },
-    ],
+        name: "Figma"
+      }
+    ]
   },
   {
     key: "Markup/Styling",
     list: [
       {
         id: 0,
-        name: "HTML",
+        name: "HTML"
       },
       {
         id: 1,
-        name: "CSS",
+        name: "CSS"
       },
       {
         id: 2,
-        name: "SASS/SCSS",
+        name: "SASS/SCSS"
       },
       {
         id: 3,
-        name: "Styled-Components",
+        name: "Styled-Components"
       },
       {
         id: 4,
-        name: "tailwind CSS",
-      },
-    ],
+        name: "tailwind CSS"
+      }
+    ]
   },
   {
     key: "Web",
     list: [
       {
         id: 0,
-        name: "JavaScript",
+        name: "JavaScript"
       },
       {
         id: 1,
-        name: "TypeScript",
+        name: "TypeScript"
       },
       {
         id: 2,
-        name: "React",
+        name: "React"
       },
       {
         id: 3,
-        name: "Vue",
-      },
-    ],
+        name: "Vue"
+      }
+    ]
   },
   {
     key: "App",
     list: [
       {
         id: 0,
-        name: "React Native",
-      },
-    ],
+        name: "React Native"
+      }
+    ]
   },
   {
     key: "Backend",
     list: [
       {
         id: 0,
-        name: "ExpressJS",
+        name: "ExpressJS"
       },
       {
         id: 1,
-        name: "NestJS",
-      },
-    ],
-  },
+        name: "NestJS"
+      }
+    ]
+  }
 ];

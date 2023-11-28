@@ -7,17 +7,17 @@ export const blogCategories: TypeBlogCategories = [
     depth: [
       {
         id: 0,
-        name: "JavaScript",
+        name: "JavaScript"
       },
       {
         id: 1,
-        name: "TypeScript",
+        name: "TypeScript"
       },
       { id: 2, name: "React" },
       { id: 3, name: "Next" },
       { id: 4, name: "React Native" },
-      { id: 5, name: "Vue" },
-    ],
+      { id: 5, name: "Vue" }
+    ]
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ export const blogCategories: TypeBlogCategories = [
     depth: [
       { id: 0, name: "Node" },
       { id: 1, name: "Express" },
-      { id: 2, name: "Nest" },
-    ],
-  },
+      { id: 2, name: "Nest" }
+    ]
+  }
 ];

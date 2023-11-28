@@ -1,37 +1,50 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-// Styled
-export const HeaderContainer = styled.header`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const HeaderStyled = {
+  HeaderContainer: styled.header`
+    position: relative;
+    background: #fff;
+    box-shadow: 0 6px 14px rgba(101, 108, 114, 0.2);
+  `,
 
-export const InnerContents = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  padding: 1.2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
+  InnerHeader: styled.div`
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
 
-export const Logo = styled(NavLink)`
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.textColor};
-`;
+  Logo: styled.h1`
+    font-size: 20px;
+    font-weight: 800;
+    color: ${({ theme }) => theme.colors.textColor};
+  `,
 
-export const Gnb = styled.nav``;
+  Lnb: styled.ul`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2.5vw;
 
-export const Ul = styled.ul`
-  display: flex;
-  gap: 40px;
-`;
+    li {
+      font-size: 17px;
+      color: #1a1a1a;
 
-export const Li = styled.li`
-  font-size: 1rem;
-  font-weight: 400;
-`;
+      // 메뉴가 액티브 됐을 때
+      .active {
+        color: ${({ theme }) => theme.colors.primaryColor};
+      }
+    }
+  `,
+
+  Gnb: styled.ul`
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  `
+};
+
+export default HeaderStyled;

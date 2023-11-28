@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": ["dist", "build", "public", ".eslintrc.js"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11
+  },
+  "plugins": ["react-refresh", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-const-assign": "error",
+    "no-var": "warn",
+    "no-new-object": "error",
+    "object-shorthand": "error",
+    "prefer-object-spread": "error",
+    "no-array-constructor": "error",
+    "array-callback-return": "warn",
+    "prefer-destructuring": "error",
+    "quotes": ["error", "double"],
+    "prefer-template": "error",
+    "template-curly-spacing": "error",
+    "no-eval": "error",
+    "no-useless-escape": "error",
+    "default-param-last": "error",
+    "no-new-func": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "space-before-blocks": "error",
+    "no-param-reassign": "error",
+    "prefer-spread": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-spacing": "error",
+    "arrow-parens": ["error", "always"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

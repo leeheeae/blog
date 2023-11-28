@@ -3,14 +3,7 @@ export type SkillActiveIndexProps = {
   indexes: number[] | null[];
 };
 
-export type SkillKeys =
-  | "Design"
-  | "Markup/Styling"
-  | "Web"
-  | "App"
-  | "Backend"
-  | "Database"
-  | "Others";
+export type SkillKeys = "Design" | "Markup/Styling" | "Web" | "App" | "Backend" | "Database" | "Others";
 
 export type SkillListItem = {
   id: number;

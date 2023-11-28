@@ -12,9 +12,7 @@ function Sidebar() {
             <S.SideBarCategoryName>{category.name}</S.SideBarCategoryName>
             <S.SideBarCategoryDepth>
               {category.depth?.map((subCategory) => (
-                <S.SideBarCategoryDepthItem
-                  key={`category-${category.id}-${subCategory.id}`}
-                >
+                <S.SideBarCategoryDepthItem key={`category-${category.id}-${subCategory.id}`}>
                   {subCategory.name}
                 </S.SideBarCategoryDepthItem>
               ))}

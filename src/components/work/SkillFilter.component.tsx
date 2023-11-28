@@ -5,7 +5,7 @@ import {
   CategoriesItem,
   Category,
   ContentsSubTitle,
-  ContentsTitle,
+  ContentsTitle
 } from "./SkillFilter.styled";
 import { useState } from "react";
 import { SkillFilterProps, SkillKeys } from "@/types/skills.type";
@@ -20,7 +20,7 @@ function SkillFilter() {
     { key: "Markup/Styling", ids: [] },
     { key: "Web", ids: [] },
     { key: "App", ids: [] },
-    { key: "Backend", ids: [] },
+    { key: "Backend", ids: [] }
   ]);
 
   /**
@@ -29,15 +29,10 @@ function SkillFilter() {
    * @param categoryIndex : 카테고리 인덱스
    * @returns
    */
-  const handleSkillClick = (
-    skillKey: SkillKeys,
-    categoryIds: number | null
-  ) => {
+  const handleSkillClick = (skillKey: SkillKeys, categoryIds: number | null) => {
     // 카테고리 인덱스가 없을 경우 전체를 선택한 것이므로 모든 카테고리 인덱스를 초기화
     if (categoryIds === null) {
-      const updateIds = activeSkillIds.map((item) =>
-        item.key === skillKey ? { ...item, ids: [] } : item
-      );
+      const updateIds = activeSkillIds.map((item) => (item.key === skillKey ? { ...item, ids: [] } : item));
       setActiveSkillIds(updateIds);
     } else {
       // 카테고리 인덱스가 있을 경우 해당 카테고리 인덱스를 추가하거나 제거
@@ -47,7 +42,7 @@ function SkillFilter() {
               ...item,
               ids: item.ids.includes(categoryIds)
                 ? item.ids.filter((id) => id !== categoryIds)
-                : [...item.ids, categoryIds],
+                : [...item.ids, categoryIds]
             }
           : item
       );
@@ -60,9 +55,7 @@ function SkillFilter() {
       {/* Skills */}
       <ContentsTitle>Skills</ContentsTitle>
       {skills.map((skill) => {
-        const targetSkillIndex = activeSkillIds.findIndex(
-          (item) => item.key === skill.key
-        );
+        const targetSkillIndex = activeSkillIds.findIndex((item) => item.key === skill.key);
 
         return (
           <CategoriesItem key={`skill-${skill.key}`}>
@@ -76,9 +69,7 @@ function SkillFilter() {
               </Category>
 
               {skill.list?.map((item) => {
-                const isActive = activeSkillIds[targetSkillIndex].ids?.includes(
-                  item.id
-                );
+                const isActive = activeSkillIds[targetSkillIndex].ids?.includes(item.id);
 
                 return (
                   <Category
