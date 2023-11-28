@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { headerHeight } from "@/constants/theme.ts";
 
 const HeaderStyled = {
   HeaderContainer: styled.header`
@@ -8,7 +9,7 @@ const HeaderStyled = {
   `,
 
   InnerHeader: styled.div`
-    height: 70px;
+    height: ${headerHeight};
     padding: 0 40px;
     display: flex;
     justify-content: space-between;

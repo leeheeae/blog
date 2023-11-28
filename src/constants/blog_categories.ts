@@ -1,6 +1,6 @@
-import { TypeBlogCategories } from "@/types/blog-categories.type";
+import { BlogCategory } from "@/types/blog_categories.type.ts";
 
-export const blogCategories: TypeBlogCategories = [
+export const blog_categories: BlogCategory[] = [
   {
     id: 0,
     name: "Frontend",

@@ -24,10 +24,8 @@ function Header() {
         {/* LNB */}
         <S.Lnb>
           {LNB.map((menu: LnbMenu) => (
-            <li>
-              <NavLink to={menu.link} key={menu.name}>
-                {menu.name}
-              </NavLink>
+            <li key={menu.name}>
+              <NavLink to={menu.link}>{menu.name}</NavLink>
             </li>
           ))}
         </S.Lnb>

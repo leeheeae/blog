@@ -5,14 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Styled
 import reset from "styled-reset";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./constants/theme";
+import { darkTheme, lightTheme } from "@/constants/theme";
 
 // Pages
-import HomePage from "./pages/HomePage";
-import WorkPage from "./pages/WorkPage";
-import ListPage from "./pages/blog/ListPage";
-import DetailPage from "./pages/blog/DetailPage";
-import BlogTemplate from "./pages/blog/BlogTemplate";
+import Home_page from "@/pages/home_page.tsx";
+import List_page from "@/pages/blog/list_page.tsx";
+import Detail_page from "@/pages/blog/detail_page.tsx";
+import Blog_template from "@/pages/blog/blog_template.tsx";
 
 // Store
 import useUiStore from "@/store/ui.store.ts";
@@ -22,18 +21,19 @@ const routes = createBrowserRouter(
   [
     {
       path: "/",
-      element: <HomePage />
+      element: <Home_page />
     },
     {
       path: "/work",
-      element: <WorkPage />
+      // element: <WorkPage />
+      element: null
     },
     {
       path: "/blog",
-      element: <BlogTemplate />,
+      element: <Blog_template />,
       children: [
-        { path: "list", element: <ListPage /> },
-        { path: "detail", element: <DetailPage /> }
+        { path: "list", element: <List_page /> },
+        { path: "detail", element: <Detail_page /> }
       ]
     }
   ],
