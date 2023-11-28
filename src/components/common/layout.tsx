@@ -1,6 +1,6 @@
 import React from "react";
 import S from "./layout.styled.tsx";
-import Header from "@/components/common/header.component.tsx";
+import Header from "@/components/common/header.tsx";
 
 interface ILayout {
   children: React.ReactNode;

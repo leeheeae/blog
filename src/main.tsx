@@ -8,10 +8,10 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "@/constants/theme";
 
 // Pages
-import Home_page from "@/pages/home_page.tsx";
-import List_page from "@/pages/blog/list_page.tsx";
-import Detail_page from "@/pages/blog/detail_page.tsx";
-import Blog_template from "@/pages/blog/blog_template.tsx";
+import HomePage from "@/pages/home-page.tsx";
+import ListPage from "@/pages/blog/list-page.tsx";
+import DetailPage from "@/pages/blog/detail-page.tsx";
+import BlogTemplate from "@/pages/blog/blog-template.tsx";
 
 // Store
 import useUiStore from "@/store/ui.store.ts";
@@ -21,7 +21,7 @@ const routes = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Home_page />
+      element: <HomePage />
     },
     {
       path: "/work",
@@ -30,10 +30,10 @@ const routes = createBrowserRouter(
     },
     {
       path: "/blog",
-      element: <Blog_template />,
+      element: <BlogTemplate />,
       children: [
-        { path: "list", element: <List_page /> },
-        { path: "detail", element: <Detail_page /> }
+        { index: true, element: <ListPage /> },
+        { path: "detail", element: <DetailPage /> }
       ]
     }
   ],
@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
-    font-family: 'SUITE', 'Outfit', 'Noto Sans KR', sans-serif;
+    font-family: 'Outfit', 'SUITE', 'Noto Sans KR', sans-serif;
   }
 
   a {
@@ -75,16 +75,18 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     background: transparent;
   }
-  
+
   button:hover {
-    border: inherit;
+    outline: none;
+    border: none;
   }
-  
+
   button:focus,
   button:focus-visible {
-    border: inherit;
+    outline: none;
+    border: none;
   }
-  
+
   ul,
   ol {
     list-style: none;

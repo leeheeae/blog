@@ -3,7 +3,10 @@ import { headerHeight } from "@/constants/theme.ts";
 
 const HeaderStyled = {
   HeaderContainer: styled.header`
-    position: relative;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
     box-shadow: 0 5px 10px rgba(101, 108, 114, 0.12);
     background: ${({ theme }) => theme.colors.backgroundColor};
   `,
@@ -18,7 +21,7 @@ const HeaderStyled = {
 
   Logo: styled.h1`
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 700;
     color: ${({ theme }) => theme.colors.textColor};
   `,
 
@@ -32,7 +35,7 @@ const HeaderStyled = {
 
     li {
       font-size: 17px;
-      font-weight: 400;
+      font-weight: 600;
       color: ${({ theme }) => theme.colors.textColor};
 
       // 메뉴가 액티브 됐을 때

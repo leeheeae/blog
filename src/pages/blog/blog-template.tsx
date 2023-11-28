@@ -1,14 +1,16 @@
-import Layout from "@/components/common/layout.component.tsx";
+import Layout from "@/components/common/layout.tsx";
 import Categories from "@/components/blog/categories.tsx";
+import { Outlet } from "react-router-dom";
 
-function Blog_template() {
+function BlogTemplate() {
   return (
     <Layout>
       <div style={{ display: "flex", height: "100%" }}>
         <Categories />
+        <Outlet />
       </div>
     </Layout>
   );
 }
 
-export default Blog_template;
+export default BlogTemplate;

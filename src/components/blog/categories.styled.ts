@@ -3,8 +3,11 @@ import { headerHeight } from "@/constants/theme.ts";
 
 const CategoriesStyled = {
   Container: styled.div`
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     height: calc(100vh - ${headerHeight});
+    background: ${({ theme }) => theme.colors.backgroundColor};
     box-shadow: 5px 5px 10px rgba(101, 108, 114, 0.12);
   `,
 
@@ -52,16 +55,16 @@ const CategoriesStyled = {
 
   SideBarTitle: styled.h1`
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: ${({ theme }) => theme.colors.grayColor};
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   `,
 
   CategoryItem: styled.div<{ isFirst: boolean }>`
     ${(props) => {
       if (!props.isFirst) {
         return css`
-          margin: 15px 0 15px 16px;
+          margin: 18px 0 18px 16px;
         `;
       } else {
         return css`
@@ -75,13 +78,13 @@ const CategoriesStyled = {
     ${({ isFirst }) => {
       if (isFirst) {
         return css`
-          font-size: 18px;
+          font-size: 19px;
           font-weight: 600;
         `;
       } else {
         return css`
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 600;
         `;
       }
     }};
