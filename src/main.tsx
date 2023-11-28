@@ -2,20 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// # Styled
-import "./index.css";
+// Styled
+import reset from "styled-reset";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { lightTheme } from "./constants/theme";
+import { darkTheme, lightTheme } from "./constants/theme";
 
-// # Pages
+// Pages
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
 import ListPage from "./pages/blog/ListPage";
 import DetailPage from "./pages/blog/DetailPage";
 import BlogTemplate from "./pages/blog/BlogTemplate";
-import reset from "styled-reset";
 
-// # Routes
+// Store
+import useUiStore from "@/store/ui.store.ts";
+
+// Routes
 const routes = createBrowserRouter(
   [
     {
@@ -52,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
-    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    font-family: 'SUITE', 'Outfit', 'Noto Sans KR', sans-serif;
   }
 
   a {
@@ -67,10 +69,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    border-radius: 8px;
     font-family: inherit;
     cursor: pointer;
     outline: none;
+    border: none;
+    background: transparent;
+  }
+  
+  button:hover {
+    border: inherit;
+  }
+  
+  button:focus,
+  button:focus-visible {
+    border: inherit;
   }
   
   ul,
@@ -83,9 +95,17 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <GlobalStyle />
-    <ThemeProvider theme={lightTheme}>
-      <RouterProvider router={routes} />
-    </ThemeProvider>
+    <RootComponent />
   </React.StrictMode>
 );
+
+function RootComponent() {
+  const isDarkMode = useUiStore((state) => state.isDarkMode);
+
+  return (
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <RouterProvider router={routes} />
+    </ThemeProvider>
+  );
+}

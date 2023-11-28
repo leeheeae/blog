@@ -1,5 +1,5 @@
-import Header from "./Header.component";
-import { Container } from "./Template.styled";
+import Header from "./header.component.tsx";
+import { Container } from "./template.styled.tsx";
 
 function Template({ children }: { children: React.ReactNode }) {
   return (

@@ -3,8 +3,8 @@ import styled from "styled-components";
 const HeaderStyled = {
   HeaderContainer: styled.header`
     position: relative;
-    background: #fff;
-    box-shadow: 0 6px 14px rgba(101, 108, 114, 0.2);
+    box-shadow: 0 5px 10px rgba(101, 108, 114, 0.12);
+    background: ${({ theme }) => theme.colors.backgroundColor};
   `,
 
   InnerHeader: styled.div`
@@ -16,7 +16,7 @@ const HeaderStyled = {
   `,
 
   Logo: styled.h1`
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.textColor};
   `,
@@ -31,7 +31,8 @@ const HeaderStyled = {
 
     li {
       font-size: 17px;
-      color: #1a1a1a;
+      font-weight: 400;
+      color: ${({ theme }) => theme.colors.textColor};
 
       // 메뉴가 액티브 됐을 때
       .active {
@@ -44,6 +45,16 @@ const HeaderStyled = {
     display: flex;
     align-items: center;
     gap: 1rem;
+  `,
+
+  DarkModeButton: styled.button`
+    transition: 0.3s;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
   `
 };
 

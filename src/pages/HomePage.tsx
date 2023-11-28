@@ -1,12 +1,7 @@
-import Template from "@/components/common/Template.component";
-import MainBanner from "@/components/home/MainBanner.component";
+import Template from "@/components/common/template.component.tsx";
 
 function HomePage() {
-  return (
-    <Template>
-      <MainBanner />
-    </Template>
-  );
+  return <Template>{/*<MainBanner />*/}</Template>;
 }
 
 export default HomePage;
