@@ -9,7 +9,7 @@ const AddButtonStyled = {
     right: 4vw;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     box-shadow: 0 0 20px rgba(101, 108, 114, 0.3);
     transition: 0.3s;
 

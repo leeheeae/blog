@@ -15,6 +15,7 @@ import BlogTemplate from "@/pages/blog/blog-template.tsx";
 
 // Store
 import useUiStore from "@/store/ui.store.ts";
+import WritePage from "@/pages/blog/write-page.tsx";
 
 // Routes
 const routes = createBrowserRouter(
@@ -33,7 +34,8 @@ const routes = createBrowserRouter(
       element: <BlogTemplate />,
       children: [
         { index: true, element: <ListPage /> },
-        { path: "detail", element: <DetailPage /> }
+        { path: "detail", element: <DetailPage /> },
+        { path: "write", element: <WritePage /> }
       ]
     }
   ],
