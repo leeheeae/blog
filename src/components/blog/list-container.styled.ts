@@ -87,28 +87,31 @@ const ListContainerStyled = {
 
   TotalCountWrap: styled.div`
     display: flex;
+    align-items: center;
   `,
 
   TotalCountItem: styled.div`
     h4 {
       font-size: 14px;
       font-weight: 400;
-      color: #acb7c1;
+      color: ${({ theme }) => theme.colors.textColor};
+      opacity: 0.5;
       margin-bottom: 6px;
     }
 
     p {
       font-size: 28px;
       font-weight: 600;
-      color: #0a0a0a;
+      color: ${({ theme }) => theme.colors.textColor};
     }
   `,
 
   Line: styled.div`
     width: 1px;
-    height: 50px;
+    height: 54px;
     margin: 0 30px;
-    background: #dfdfdf;
+    background: ${({ theme }) => theme.colors.grayColor};
+    opacity: 0.4;
   `
 };
 

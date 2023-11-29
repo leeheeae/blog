@@ -1,5 +1,6 @@
 import S from "./list-container.styled.ts";
 import { HiOutlineSearch } from "react-icons/hi";
+import AddButton from "@/components/blog/add-button.tsx";
 
 function ListContainer() {
   return (
@@ -43,6 +44,8 @@ function ListContainer() {
           </S.ListTitleBottom>
         </S.ListTileInnerWrap>
       </S.ListTitleWrap>
+
+      <AddButton />
     </S.Container>
   );
 }
